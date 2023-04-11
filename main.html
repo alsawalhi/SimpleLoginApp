@@ -38,13 +38,33 @@
                     placeholder="Password"
                   />
                 </div>
-                <button type="submit" class="btn btn-primary">Login</button>
+                <button
+                  type="submit"
+                  class="btn btn-primary"
+                  onclick="handleLogin()"
+                >
+                  Login
+                </button>
                 <button type="button" class="btn btn-secondary">Signup</button>
               </form>
+              <div id="message" class="mt-3"></div>
             </div>
           </div>
         </div>
       </div>
     </div>
+
+    <script>
+      function handleLogin() {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+
+        if (username === "moe@sawalhi.com" && password === "123456") {
+          document.getElementById("message").innerHTML = "Welcome!";
+        } else {
+          document.getElementById("message").innerHTML = "Login failed.";
+        }
+      }
+    </script>
   </body>
 </html>
